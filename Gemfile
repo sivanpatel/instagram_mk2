@@ -4,6 +4,8 @@ gem 'haml'
 
 gem 'paperclip'
 
+gem 'shoulda'
+
 group :test do
   gem 'rspec-rails'
   gem 'capybara'

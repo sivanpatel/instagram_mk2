@@ -16,7 +16,7 @@ feature 'photos' do
       click_link 'Add a photo'
       page.attach_file 'photo[image]', 'spec/assets/images/jacket.jpg'
       fill_in 'Name', with: 'cool jacket'
-      click_button 'Create Photo'
+      click_button 'Post'
       expect(page).to have_content 'cool jacket'
       expect(page).to have_selector 'img'
     end
