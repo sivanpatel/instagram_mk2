@@ -9,6 +9,7 @@
             = comment.thoughts
     - else
       %p No comments
+      
     = link_to photo.name, photo_path(photo)
     = link_to "Delete #{photo.name}", photo_path(photo), method: :delete
     = link_to "Comment", new_photo_comment_path(photo)
