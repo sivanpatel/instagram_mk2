@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'haml'
+
+gem 'paperclip'
+
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
