@@ -32,4 +32,14 @@ feature 'photos' do
     end
   end
 
+  context 'deleting photos' do
+    before {Photo.create name: 'test'}
+    scenario 'removes a photo when a user clicks a delete link' do
+      visit '/photos'
+      click_link 'Delete test'
+      expect(page).not_to have_content 'test'
+      expect(page).to have_content 'Photo deleted successfully'
+    end
+  end
+
 end
